@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<title>CSE 578 Homework #1: Dhaval Patodiya</title>
+	</head>
+	<style>
+		.container {
+			maxwidth: 970px;
+		}
+		h2, h3, h4, span {
+			text-align: center;
+		}
+		img {
+			width:100%;
+			border: 1px solid gray;
+		}
+		p {
+			text-align: justify;
+			text-justify: inter-word;
+		}
+	</style>
+    <body>
+	    <div class="container">
+			<header>
+				<h2 style=>Homework #1 - Vis in the Wild</h2>
+				<h3>Dhaval Patodiya&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;dpatodiy@asu.edu</h3>
+			</header>
+			<hr>
+			<img src="imgs/sparky.png" alt="The cool visualization example that I found!">
+			<hr>
+			<h4>Critics and Audience Movie Reviews</h4>
+			<div style="width:100%;text-align:center;">
+				<a href="https://informationisbeautiful.net/visualizations/star-wars-last-jedi-one-of-the-biggest-rotten-tomatoes-audience-vs-critics-score-splits-ever/" target="_blank">Link to visualization</a></div>
+			<p>
+				<b>Summary:</b> This visualization shows the difference between the movies reviewed by critics and audience in a scatter plot graph. The dataset is used obtained from RottenTomatoes. The data consists of 92 movies. 
+				Y-axis represents the year of the movies released. X-axis represents the percentage gap between the critics review and audience review (Audience hates) and 3rd axis is the budget of the movie. The movies are represented as cricle and area of circle indicates the budget of the movie. 
+				Different colors are used to show the different genere of the movies.
+			</p>
+			<ul>
+				<li><b>Domain:</b> The target users of the graph are the general audience and movie enthusiast of the movies.</li>
+				<li><b>Data:</b> 
+					<ul>
+						<li><b>Domain description:</b> The reviews of users and critics for movies (from RottenTomatoes)</li> 
+						<li><b>Abstraction:</b>
+							<ul>
+								<li><b>Dataset Type: </b>Tabular </li>
+								<li><b>Attribute: </b>Rotten Tomatoes critics %
+									<ul>
+										<li><b>Type: </b>Ordered  (Quantitative)</li>
+										<li><b>Cardinality: </b>41 (ratings can vary from 59-99)</li>
+									</ul>
+								</li>
+								<li><b>Attribute: </b>Rotten Tomatoes Audience %
+									<ul>
+										<li><b>Type: </b>Ordered (Quantitative)</li>
+										<li><b>Cardinality: </b>38 (ratings can vary from 42-80)</li>
+									</ul>
+								</li>
+								<li><b>Attribute: </b>% gap_dervied (difference bewtween critics and audience ratings)
+									<ul>
+										<li><b>Type: </b>Ordered (Quantitative)</li>
+										<li><b>Cardinality: </b>30 (difference in ratings can vary from 16-45)</li>
+									</ul>
+								</li>
+								<li><b>Attribute: </b> Year
+									<ul>
+										<li><b>Type: </b>Ordered (Quantitative)</li>
+										<li><b>Cardinality: </b>11 (2007 -2017)</li>
+									</ul>
+								</li>
+								<li><b>Attribute: </b> Genre
+									<ul>
+										<li><b>Type: </b>Caregorical </li>
+										<li><b>Cardinality: </b>6 values</li>
+									</ul>
+								</li>
+								<li><b>Attribute: </b> Budget
+									<ul>
+										<li><b>Type: </b>Ordered (Quantitative)</li>
+										<li><b>Cardinality: </b>301 (budget ranges from 0-300)</li>
+									</ul>
+								</li>
+								<li><b>Attribute: </b> Movie Name
+									<ul>
+										<li><b>Type: </b>Categorical </li>
+										<li><b>Cardinality: </b>92 values</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><b>Task:</b>
+					<ul>
+						<li><b>Domain description:</b> Finding movies which was hated by audience but loved by critics and had high budget in a specific genre </li> 
+						<li><b>Abstraction (Optional):</b> 
+							<ul>
+								<li><b>Attribute: </b>Genre
+									<ul>
+										<li>Categorical : "Movies having comedy genre"</li>
+									</ul>
+								</li>
+								<li><b>Attribute: </b>Budget
+									<ul>
+										<li>Ordered : "budget of movies hated by user"</li>
+									</ul>
+								</li>
+								<li><b>Attribute: </b> Gap
+									<ul>
+										<li>Ordered : "Movies hated or liked either by audience, critics, or both"</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li> Some Other tasks:</li>
+						<ul>
+							<li>Find movies having less difference between the reviews of critics and users</li>
+							<li>Movies highly rate by critics, audience and etc.</li>
+						</ul>
+					</ul>
+				</li>
+				<li><b>Idiom:</b>
+					<ul>
+						<li>Circles : Movies</li>
+						<li>Circle area : Budget</li>
+						<li>Color of circle : Genere</li>
+						<li>Vertical position : Year made</li>
+						<li>Horizontal position : How much Audience hates the movie</li>
+					</ul>
+			</ul>
+			<p>
+				<b>Personal Thoughts: </b>The visualization looks neat and clean for the given dataset. Colors don't overlap with each others and movies and it gives a nice representation of the data.
+				The area of the circle shows the budget which is properly scaled down which doesn't other circles. But the this visualization won't work if the datasets is increased and more fields are added.
+				If the user were able to interact with the visualization then it would be more effective.
+			</p>
+		</div>
+	</body>
+</html>
