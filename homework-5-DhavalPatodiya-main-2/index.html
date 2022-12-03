@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Homework #3: Argumentative Vis - CSE 578 - Fall 2022</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <style>
+            .myContainer {
+                margin:auto;
+                width:1210px;
+            }
+            #imdb_div, #rtt_div {
+                float:left;
+                width:600px;
+                padding:10px;
+            }
+            #rtt_div {
+                float:right;
+            }
+            svg {
+                width: 580px;
+                height:500px;
+                background-color: white;
+                border: 1px solid lightgray;
+                border-radius: 3px;
+                display: block;
+                margin: auto;
+            }
+            li{
+                margin-left: 5px;
+            }
+            div.tooltip {
+                position: absolute;
+                text-align: center;
+                width: 100px;
+                height: 40px;
+                padding: 2px;
+                font: 12px sans-serif;
+                background: whitesmoke;
+                border: 1px solid black;
+                /* border-color: black; */
+                border-radius: 8px;
+                pointer-events: none;
+            }
+        </style>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="myContainer">
+            <h1 class="text-center">Homework #5: Argumentative Vis - Movies Rating</h1>
+            <h3 class="text-center">Dhaval Patodiya - dpatodiy@asu.edu</h3>
+            <hr>
+            <form class="border border-dark rounded p-2 mb-2 bg-light shadow-sm">
+                <label for="wordbox">Introduction</label>
+               
+                    <ul class="form-control mb-2 mt-1" id="wordbox" rows="8">
+                        <li>People watch movies and rates them on the basis of likeness. Critics watch movies and rates movies on basis of different criteria</li>
+                        <li>This dataset is called FilmTV movies dataset and is taken from kaggle : <a href="https://www.kaggle.com/datasets/stefanoleone992/filmtv-movies-dataset">https://www.kaggle.com/datasets/stefanoleone992/filmtv-movies-dataset</a></li>
+                        <li>The data shows the rating of the movies in 2021 whose length is 130 minutes</li>
+                        <li>The left side shows the avg rating given the user on various sites like IMDb, rotten tomatoes, etc</li>
+                        <li>The right side shows the rating given by the critics</li>
+                    </ul>
+                    <label for="wordbox">Rhetorics</label>
+                
+                    <ul class="form-control mb-2 mt-1" id="wordbox" rows="8">
+                        <li>Green and Tomato color is used to differentiate the avg rating and critics rating</li>
+                        <li>It uses omission technique and data provenance to show the avg rating and critics rating for a movie</li>
+                    </ul>
+                
+            </form> 
+            <br>
+            <div id="imdb_div" class="border border-dark rounded bg-light shadow-sm">
+                    Avg Rating of Movies
+                    <svg id="imdb_svg"></svg>
+            </div>
+            <div id="rtt_div" class="border border-dark rounded bg-light shadow-sm">
+                    Critics Rating of Movies
+                    <svg id="rtt_svg"></svg>
+            </div>
+        </div>
+    </body>
+</html> 
